@@ -207,11 +207,12 @@ Determine whether data is missing randomly. Always remember a famous quote, "The
 ### 5. Categorical Feature Encoding
 
 If we plan to conduct exploratory data analysis using unsupervised algorithms such as K-Means Clustering, Hierarchical Clustering, DBSCAN, or Gaussian Mixture Modeling (GMM), we must first encode all categorical features since these algorithms require numerical inputs. One-hot encoding, Target (Mean) encoding, Frequency encoding, Label encoding, Ordinal encoding, Feature hashing (when we don't know all the possible values of a categorical feature). It is important to note the timing of feature encoding in the ML pipeline:
-        - Perform basic encoding (one-hot, label) before train/validation/test split to ensure consistent encoding and preserve data distribution integrity across all splits.
-        - Execute advanced encoding (target, frequency) after the split using only training data to prevent data leakage, as these methods derive information from the target 
-          variable or distribution patterns.
-        - Create and fit ML pipeline on training data to capture all preprocessing steps (imputation, encoding, scaling, feature engineering), then apply this fitted pipeline 
-          to validation/test sets, maintaining data independence while ensuring identical transformations across all datasets for unbiased model evaluation.
+
+            - Perform basic encoding (one-hot, label) before train/validation/test split to ensure consistent encoding and preserve data distribution integrity across all splits.
+            - Execute advanced encoding (target, frequency) after the split using only training data to prevent data leakage, as these methods derive information from the target 
+              variable or distribution patterns.
+            - Create and fit ML pipeline on training data to capture all preprocessing steps (imputation, encoding, scaling, feature engineering), then apply this fitted pipeline 
+              to validation/test sets, maintaining data independence while ensuring identical transformations across all datasets for unbiased model evaluation.
 
 <h2>Feature Engineering and Selection</h2>
 
