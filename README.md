@@ -1188,7 +1188,7 @@ This framework allows us to handle various types of response variables while mai
 ##### **Simple Way to Remember Precision/Recall**:
          - Precision: "Of all predicted fraud alerts, how many were actual fraud?"
          - Recall: "Of all actual frauds, how many did we catch?"
-         - State Farm Example:
+         - Insurance Company Example:
             - High Recall: Catch most fraudulent claims
             - Lower Precision OK: Can investigate false positives
             - Cost of missing fraud >> Cost of investigation
@@ -1231,7 +1231,7 @@ This framework allows us to handle various types of response variables while mai
          - y_pred = (y_prob > threshold).astype(int)
 
 #### **Business Case Examples**
-         - State Farm Example:  **Fraud Detection**, Catch all Frauds
+         - Insurance Company Example:  **Fraud Detection**, Catch all Frauds
             - False Positive: Extra investigation ($1000)
             - False Negative: Pay fraudulent claim ($50,000)
             - Optimize recall even at a precision cost
@@ -1248,35 +1248,35 @@ In "FP" (False Positive), the terminologies are read as:
 ```
      - "Out of what we PREDICTED as fraud, how many were ACTUALLY fraud?"
      - Formula: TP/(TP + FP) 
-     - State Farm: "Of 100 claims we investigated, predicted as fraud, how many were real fraud?"
+     - Insurance Company: "Of 100 claims we investigated, predicted as fraud, how many were real fraud?"
 ```
 
 #### Metric: Recall (Sensitivity, True Positive Rate, TPR)
 ```
      - "Out of all ACTUAL fraud cases, how many did we CATCH?"
      - Formula: TP/(TP + FN)
-     - State Farm: "Of all real fraud, how many did we detect?"
+     - Insurance Company: "Of all real fraud, how many did we detect?"
 ```
 
 #### Metric: False Positive Rate (FPR)
 ```
      - "Out of all LEGITIMATE claims, how many did we wrongly flag?"
      - Formula: FP/(FP + TN) = 1 - Specificity
-     - State Farm: "Of all honest claims, how many did we unnecessarily investigate?"
+     - Insurance Company: "Of all honest claims, how many did we unnecessarily investigate?"
 ```
 
 #### Metric: Specificity (True Negative Rate, TNR)
 ```
      - "Out of all LEGITIMATE claims, how many did we correctly pass?"
      - Formula: TN/(TN + FP)
-     - State Farm: "Of all honest claims, how many did we correctly approve?"
+     - Insurance Company: "Of all honest claims, how many did we correctly approve?"
 ```
 
 #### Metric: F1-Score (Harmonic mean of Precision and Recall)
 ```
      - "How well are we BALANCING fraud detection and investigation resources?"
      - Formula: 2 * (Precision * Recall)/(Precision + Recall)
-     - State Farm: "How well are we balancing investigation costs vs fraud catch?"
+     - Insurance Company: "How well are we balancing investigation costs vs fraud catch?"
 ```
 
 #### Metric: F-β Score
@@ -1284,7 +1284,7 @@ In "FP" (False Positive), the terminologies are read as:
      - "Are we properly considering that fraud costs 50x more than investigation?"
      - Formula: (1 + β²) * (Precision * Recall)/(β² * Precision + Recall)
      - where β = √(cost_fraud/cost_investigation) = √(50000/1000) ≈ 7
-     - State Farm: "Are we willing to investigate 7 good claims to catch 1 fraud?"
+     - Insurance Company: "Are we willing to investigate 7 good claims to catch 1 fraud?"
 ```
 
 #### High Cost of False Negatives ($50,000):
