@@ -3590,7 +3590,7 @@ and valuable for exploratory data analysis and feature engineering.
          - Constant mean
          - Constant variance
          - Constant autocorrelation structure
-       * Most time series models require stationarity
+       * Most time series models - ARIMA, SARIMA - require stationarity
        * Tests: Augmented Dickey-Fuller (ADF), KPSS
        * Achieved through differencing or transformations
        
