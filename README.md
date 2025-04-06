@@ -4658,7 +4658,7 @@ estimate model accuracy without requiring a separate validation set
 <h3>Q.42. What is bagging and how is random forest different from bagging?</h3>
 
 ```
-     - Also known as "bagging," a machine learning ensemble meta-algorithm
+     - "bagging" is a machine learning ensemble meta-algorithm
      - Designed to improve the stability and accuracy of machine learning algorithms
      - Decreases variance and helps to avoid overfitting in classification and regression
      - Usually applied to decision tree methods
@@ -4694,7 +4694,7 @@ estimate model accuracy without requiring a separate validation set
      - RF tends to perform better than simple bagging but is slower
      - RF adds randomness which reduces the correlation between trees, improving generalization
      - RF trees are typically grown deep, which would cause overfitting on their own
-     - The key between RF and bagging is that the combination reduces overfitting
+     - The key difference between RF and bagging is that the RF splits data by sample and feature space both
 ```
 <h3>Q.42. What is boosting?</h3>
 
