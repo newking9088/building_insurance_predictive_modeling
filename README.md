@@ -4631,14 +4631,14 @@ Multi-faceted Approach to Building Stakeholder Buy-in:
 #### Bootstrap Out-of-Bag (OOB) Sampling
 ```
 - When sampling with replacement, approximately 63.2% of original data points appear 
-       in each bootstrap sample, leaving 36.8% as "Out-of-Bag" (OOB) samples
-     - The OOB proportion (0.368) is calculated as 1-0.632 = 0.368, where 0.632 represents 
-       the probability that items are chosen in random sampling with replacement
-     - OOB data serves as a natural validation set for assessing model performance
-     
-     - Example:
-       In a random forest, each tree is trained on a bootstrap sample, with OOB data used to 
-       estimate model accuracy without requiring a separate validation set
+in each bootstrap sample, leaving 36.8% as "Out-of-Bag" (OOB) samples
+- The OOB proportion (0.368) is calculated as 1-0.632 = 0.368, where 0.632 represents 
+the probability that items are chosen in random sampling with replacement
+- OOB data serves as a natural validation set for assessing model performance
+
+- Example:
+In a random forest, each tree is trained on a bootstrap sample, with OOB data used to 
+estimate model accuracy without requiring a separate validation set
 ```
 
 #### Bootstrap Applications and Limitations
