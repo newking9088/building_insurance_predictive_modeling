@@ -5856,7 +5856,6 @@ While these initialization techniques significantly improve training stability, 
 
 <h3>Q.61. How are neural networks structured and what are the main approaches to implementing them using modern frameworks?</h3>
 
-Based on the document content, here's a condensed explanation of neural network architecture and implementation:
 ```
      - Neural networks consist of layers of neurons: input layer, hidden layer(s), and output layer
      - Each neuron connects to every neuron in adjacent layers in a feed-forward network
