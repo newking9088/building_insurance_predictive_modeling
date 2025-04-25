@@ -633,7 +633,14 @@ class sklearn.ensemble.RandomForestClassifier(
      * Claims triage
 
 #### Gradient Boosting (XGBoost, LightGBM, CatBoost)
-I have included only parameters that we might use for hyperparameter tuning in XGBoost.
+XGBoost improves upon traditional boosting by using **parallel processing** when evaluating potential split features at each node. Instead of calculating impurity measures for each feature one-by-one, XGBoost examines all features simultaneously using parallel threads.
+
+Key difference:
+    - Traditional boosting: Evaluates features one-by-one
+    - XGBoost: Evaluates all features at once via parallel processing
+
+Note that while feature evaluation at each node inside a tree is parallelized, the trees themselves are still built sequentially, with each new tree correcting errors from previous trees. I have included only parameters that we might use for hyperparameter tuning in XGBoost.
+
 ```markdown
 xgb = XGBoostClassifier(
    tree_method='hist',         # Faster training by binning continuous features
@@ -649,11 +656,15 @@ xgb = XGBoostClassifier(
 ```
 * **Core Benefits**
   
-     * Superior predictive performance
-     * Built-in handling of missing values
+     * Built-in handling of missing values (learns smartly which path to take when encountered missing value)
      * Natural handling of imbalanced data
+     * Tree pruning using depth-first search
+     * In-built k-fold-cross-validation capacity using xgb.cv()
+     * Cache awareness and out-of-core computing
      * Automatic feature selection
      * Regularization capabilities
+     * XGBoost delivers superior predictive performance despite slightly longer training times compared to many other 
+        boosting methods.
 
 * **Insurance Use Cases**
   
