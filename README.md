@@ -636,6 +636,7 @@ class sklearn.ensemble.RandomForestClassifier(
 XGBoost improves upon traditional boosting by using **parallel processing** when evaluating potential split features at each node. Instead of calculating impurity measures for each feature one-by-one, XGBoost examines all features simultaneously using parallel threads.
 
 Key difference:
+
     - Traditional boosting: Evaluates features one-by-one
     - XGBoost: Evaluates all features at once via parallel processing
 
